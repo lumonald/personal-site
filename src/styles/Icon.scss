@@ -1,0 +1,19 @@
+$accent: #19A974;
+@mixin transition($duration) {
+    -webkit-transition: $duration;
+    -moz-transition: $duration;
+    -ms-transition: $duration;
+    -o-transition: $duration;
+    transition: $duration;
+}
+
+$a-tags: 'a i, a i:active, a i:hover, a i:visited';
+$a-tags-hover: 'a i:active, a i:hover';
+ 
+#{$a-tags} {
+  text-decoration: none;
+}
+#{$a-tags-hover} {
+  color: $accent;
+  @include transition(.2s);
+}
